@@ -1,25 +1,22 @@
-# README
+# PNW(PeriodNovelWorkspace)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+  作品ごとの単語登録機能
 
-Things you may want to cover:
+### サイトテーマ
+  「小説家になろう」や「カクヨム」といったネット媒体の小説投稿サイトを
 
-* Ruby version
+### ターゲットユーザ
+  小説家を目指す全ての人。
 
-* System dependencies
+### 主な利用シーン
+  執筆作業。
 
-* Configuration
+## 開発環境
+- OS：Big Sur(MacOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery
+- IDE：Cloud9
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# PeriodNovelWorkspace
+## 使用素材
