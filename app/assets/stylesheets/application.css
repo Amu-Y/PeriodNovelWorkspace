@@ -13,3 +13,31 @@
  *= require_tree .
  *= require_self
  */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Devanagari:wght@300&display=swap');
+
+
+body {
+  /*初期値*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: auto;
+  color: #002333;  /*青みを帯びた黒*/
+  font-family: "";  /*読みやすさ優先*/
+  background-color: #00aeff;
+}
+
+.header {
+  height: 50px;
+  background-color: #002333;
+}
+
+.header__title {
+  color: #fff;
+  font-size: 0.5em;
+  font-family: 'IBM Plex Sans Devanagari', sans-serif;
+}
+
+.header__title strong {
+  font-size: 4em;
+}
