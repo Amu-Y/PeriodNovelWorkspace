@@ -8,9 +8,18 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-    <%= render 'layouts/header' %>
+
   <body>
-    <%= yield %>
+    <div class="container">
+      <header>
+        <%= render 'layouts/header' %>
+        </header>
+      <div class="container__element">
+        <%= yield %>
+        </div>
+      <footer>
+        <%= render 'layouts/footer' %>
+        </footer>
+    </div>
   </body>
-    <%= render 'layouts/fooder' %>
 </html>

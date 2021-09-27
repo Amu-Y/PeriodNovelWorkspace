@@ -1,6 +1,12 @@
 <article class="">
+  <section>
+    <%= render 'words/list' %>
+  </section>
   <section class="">
     <%= @workspace.noveltitle %>
     <%= @workspace.overview %>
+    <%= link_to "編集", edit_workspace_path(@workspace.id) %>
+    <%= render 'novels/index', workspace:@workspace, novels:@novels, novel:@novel %>
+    <%= link_to "新規作成", new_workspace_novel_path(@workspace) %>
   </section>
 </article>

@@ -1,17 +1,17 @@
 <article class="">
   <section class="textbox">
-    <%= form_with model:@workspace, local:true do |f| %>
+    <%= form_with(model:[@workspace, @novel]) do |f| %>
       <h4 class="textbox__label">
-        小説タイトル
+        章タイトル
         </h4>
       <div class="textbox__paragraph">
-        <%= f.text_field :noveltitle, class: "textbox__body" %>
+        <%= f.text_field :chapter, class: "textbox__body" %>
         </div>
       <h4 class="textbox__label">
-        あらすじ
+        本文
         </h4>
       <div class="textbox__paragraph">
-        <%= f.text_area :overview, class: "textbox__body_big" %>
+        <%= f.text_area :novelbody, class: "textbox__body_big" %>
         </div>
       <div class="textbox__paragraph">
         <%= f.submit '編集完了' %>

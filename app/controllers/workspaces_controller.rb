@@ -20,9 +20,21 @@ class WorkspacesController < ApplicationController
   def show
     @user = current_user
     @workspace = Workspace.find(params[:id])
-    @novel = Novel.new
+    @novels = Novel.all
+    @words = Word.all
     @word = Word.new
   end
+
+  def edit
+    @workspace = Workspace.find(params[:id])
+  end
+
+  def update
+    @workspace = Workspace.find(params[:id])
+    @workspace.update(workspace_params)
+    redirect_to workspace_path(@workspace.id)
+  end
+
 
   private
   def workspace_params
