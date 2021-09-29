@@ -1,0 +1,9 @@
+<article class="">
+  <section class="">
+    <%= @novel.chapter %>
+    <%= @novel.novelbody %>
+    <%= link_to "編集", edit_workspace_novel_path(@workspace, @novel.id) %>
+    <%= link_to "削除", workspace_novel_path(@workspace, @novel.id), method: :delete %>
+    <%= link_to "戻る", workspace_path(@workspace.id) %>
+  </section>
+</article>

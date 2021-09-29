@@ -1,20 +1,20 @@
 <article class="">
   <section class="textbox">
-    <%= form_with(model:[workspace, word]) do |f| %>
+    <%= form_with model:@workspace, local:true do |f| %>
       <h4 class="textbox__label">
-        単語
+        小説タイトル
         </h4>
       <div class="textbox__paragraph">
-        <%= f.text_field :word, id: "ajax__woed",class: "textbox__body" %>
+        <%= f.text_field :noveltitle, class: "textbox__body" %>
         </div>
       <h4 class="textbox__label">
-        説明
+        あらすじ
         </h4>
       <div class="textbox__paragraph">
-        <%= f.text_area :commentary, id: "afax__commentary", class: "textbox__body_big" %>
+        <%= f.text_area :overview, class: "textbox__body_big" %>
         </div>
       <div class="textbox__paragraph">
-        <%= f.submit '編集' %>
+        <%= f.submit '新規作成' %>
         </div>
     <% end %>
   </section>

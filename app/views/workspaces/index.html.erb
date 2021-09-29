@@ -1,0 +1,9 @@
+<article class="">
+  <section class="">
+    <h3>ワークスペース一覧</h3>
+    <% @workspaces.each do |workspace| %>
+      <%= link_to workspace.noveltitle, workspace_path(workspace.id) %>
+    <% end %>
+    <div><%= link_to "新規作成", new_workspace_path %></div>
+  </section>
+</article>
