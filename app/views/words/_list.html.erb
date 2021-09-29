@@ -1,2 +1,9 @@
-<%= render 'words/index', workspace:@workspace, words:@words  %>
-<%= render 'words/new', workspace:@workspace, word:@word %>
+<div di=""></div>
+  <div id="ajax__words">
+    <%= render 'words/index', workspace:@workspace, words:@words %>
+  </div>
+
+
+
+<div id="ajax__word_edit"><%= render 'words/new', workspace:@workspace, word:@word %></div>
+

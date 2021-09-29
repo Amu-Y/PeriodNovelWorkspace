@@ -5,16 +5,16 @@
         単語
         </h4>
       <div class="textbox__paragraph">
-        <%= f.text_field :chapter, class: "textbox__body" %>
+        <%= f.text_field :word, id: "ajax__woed",class: "textbox__body" %>
         </div>
       <h4 class="textbox__label">
         説明
         </h4>
       <div class="textbox__paragraph">
-        <%= f.text_area :commentary, class: "textbox__body_big" %>
+        <%= f.text_area :commentary, id: "afax__commentary", class: "textbox__body_big" %>
         </div>
       <div class="textbox__paragraph">
-        <%= f.submit '新規作成' %>
+        <%= f.submit '登録' %>
         </div>
     <% end %>
   </section>
