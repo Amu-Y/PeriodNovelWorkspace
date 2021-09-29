@@ -20,7 +20,7 @@ class WordsController < ApplicationController
   def update
     @workspace = Workspace.find(params[:workspace_id])
     @word = Word.find(params[:id])
-    @word.update
+    @word.update(word_params)
   end
 
   def destroy

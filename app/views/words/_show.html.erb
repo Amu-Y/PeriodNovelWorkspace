@@ -1,9 +1,12 @@
 <section class="textbox">
-<div id="ajax__word_edit">
-  <div><%= word.word %></div>
-  <div><%= word.commentary %></div>
-</div>
-
-
-<%= link_to "編集", workspace_word_edit_path(workspace.id, word.id), remote: true %>
+  <div id="ajax__word_edit">
+      <%= link_to workspace_word_edit_path(workspace.id, word.id), remote: true do %>
+        <i class="fas fa-pen-square"></i>
+      <% end %>
+      <%= link_to workspace_word_path(workspace, word), method: :delete, remote: true do %>
+        <i class="fas fa-minus-square"></i>
+      <% end %>
+    <div><%= word.word %></div>
+    <div><%= word.commentary %></div>
+  </div>
 </section>

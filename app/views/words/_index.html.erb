@@ -3,11 +3,6 @@
   <% workspace.words.each do |word| %>
   <div id="ajax__word_show">
     <%= link_to word.word, workspace_word_show_path(workspace, word), remote: true %>
-    <%= link_to workspace_word_path(workspace, word), method: :delete do %>
-      <i class="fas fa-backspace"></i>
-    <% end %>
-    </div>
-
-
+  </div>
   <% end %>
 </section>
