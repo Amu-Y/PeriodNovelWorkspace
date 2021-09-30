@@ -1,10 +1,8 @@
-<article class="">
-  <section class="textbox">
-
+<article>
     <%= link_to workspace_word_show_path(workspace, word), remote: true do %>
-      <i class="fas fa-long-arrow-alt-left"></i>
+      <i class="fas fa-long-arrow-alt-left icon"></i>
     <% end %>
-
+  <section class="textbox">
     <%= form_with(model:[workspace, word]) do |f| %>
       <div class="textbox__paragraph">
         <%= f.text_field :word, id: "ajax__woed",class: "textbox__body" %>

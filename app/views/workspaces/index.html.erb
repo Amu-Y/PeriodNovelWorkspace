@@ -1,9 +1,15 @@
-<article class="">
-  <section class="">
-    <h3>ワークスペース一覧</h3>
-    <% @workspaces.each do |workspace| %>
-      <%= link_to workspace.noveltitle, workspace_path(workspace.id) %>
+<article class="container">
+  <div class="container__header">
+    <b class="container__header_text">WorkSpaceList</b>
+  </div>
+  <section class="container__soro">
+    <div class="container__main_text">
+    <% @user.workspaces.each do |workspace| %>
+      <h3>
+        <%= link_to workspace.noveltitle, workspace_path(workspace.id) %>
+      </h3>
     <% end %>
     <div><%= link_to "新規作成", new_workspace_path %></div>
+    </div>
   </section>
 </article>

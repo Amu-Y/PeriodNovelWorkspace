@@ -1,21 +1,24 @@
-<article class="">
-  <section class="textbox">
-    <%= form_with(model:[@workspace, @novel]) do |f| %>
-      <h4 class="textbox__label">
-        章タイトル
-        </h4>
-      <div class="textbox__paragraph">
-        <%= f.text_field :chapter, class: "textbox__body" %>
-        </div>
-      <h4 class="textbox__label">
-        本文
-        </h4>
-      <div class="textbox__paragraph">
-        <%= f.text_area :novelbody, class: "textbox__body_big" %>
-        </div>
-      <div class="textbox__paragraph">
-        <%= f.submit '新規作成' %>
-        </div>
-    <% end %>
+<article class="container">
+  <%= render 'workspaces/header' %>
+  <section class="container__main">
+    <div class="textbox">
+      <%= form_with(model:[@workspace, @novel]) do |f| %>
+        <h4 class="textbox__label">
+          章タイトル
+          </h4>
+        <div class="textbox__paragraph">
+          <%= f.text_field :chapter, class: "textbox__body" %>
+          </div>
+        <h4 class="textbox__label">
+          本文
+          </h4>
+        <div class="textbox__paragraph">
+          <%= f.text_area :novelbody, class: "textbox__body_big" %>
+          </div>
+        <div class="textbox__paragraph">
+          <%= f.submit '新規作成' %>
+          </div>
+      <% end %>
+    </div>
   </section>
 </article>
