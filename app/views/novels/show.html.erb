@@ -1,7 +1,8 @@
-<article class="">
-  <section class="">
+<article class="container">
+  <%= render 'workspaces/header' %>
+  <section class="container__main">
     <%= @novel.chapter %>
-    <%= @novel.novelbody %>
+    <%= simple_format @novel.novelbody %>
     <%= link_to "編集", edit_workspace_novel_path(@workspace, @novel.id) %>
     <%= link_to "削除", workspace_novel_path(@workspace, @novel.id), method: :delete %>
     <%= link_to "戻る", workspace_path(@workspace.id) %>

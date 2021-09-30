@@ -1,15 +1,12 @@
-<article class="">
+<article>
+    <%= link_to workspace_word_show_path(workspace, word), remote: true do %>
+      <i class="fas fa-long-arrow-alt-left icon"></i>
+    <% end %>
   <section class="textbox">
     <%= form_with(model:[workspace, word]) do |f| %>
-      <h4 class="textbox__label">
-        単語
-        </h4>
       <div class="textbox__paragraph">
         <%= f.text_field :word, id: "ajax__woed",class: "textbox__body" %>
         </div>
-      <h4 class="textbox__label">
-        説明
-        </h4>
       <div class="textbox__paragraph">
         <%= f.text_area :commentary, id: "afax__commentary", class: "textbox__body_big" %>
         </div>

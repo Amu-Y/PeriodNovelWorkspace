@@ -7,9 +7,8 @@ class WorkspacesController < ApplicationController
   end
 
   def index
-
+    @user = current_user
     @workspaces = Workspace.all
-
   end
 
   def new
@@ -27,6 +26,8 @@ class WorkspacesController < ApplicationController
 
   def edit
     @workspace = Workspace.find(params[:id])
+    @words = Word.all
+    @word = Word.new
   end
 
   def update

@@ -1,3 +1,23 @@
 // Place all the styles related to the Public controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.public {
+  width: 100%;
+
+}
+
+
+.public__instructions {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.public__main,
+.public__main_title {
+
+  text-align: center;
+}
+
+.public__main {
+    padding: 50px 0;
+}

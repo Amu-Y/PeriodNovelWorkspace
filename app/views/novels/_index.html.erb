@@ -1,6 +1,7 @@
 <section class="">
-  <h3>投稿一覧</h3>
+  <h5>投稿一覧</h5>
   <% workspace.novels.each do |novel| %>
-    <%= link_to novel.chapter, workspace_novel_path(workspace, novel.id) %>
+    <p><%= link_to novel.chapter, workspace_novel_path(workspace, novel.id) %></p>
+    
   <% end %>
 </section>

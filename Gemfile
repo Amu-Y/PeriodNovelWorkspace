@@ -74,3 +74,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #レイアウト
   gem 'jquery-rails'
   gem 'font-awesome-rails'
+  gem 'clipboard-rails'

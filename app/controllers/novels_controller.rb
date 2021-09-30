@@ -8,7 +8,6 @@ class NovelsController < ApplicationController
   end
 
   def index
-
     @novels = Novel.all
     @user = current_user
   end
@@ -16,16 +15,22 @@ class NovelsController < ApplicationController
   def new
     @workspace = Workspace.find(params[:workspace_id])
     @novel = Novel.new
+    @words = Word.all
+    @word = Word.new
   end
 
   def show
     @workspace = Workspace.find(params[:workspace_id])
     @novel = Novel.find(params[:id])
+    @words = Word.all
+    @word = Word.new
   end
 
   def edit
     @workspace = Workspace.find(params[:workspace_id])
     @novel = Novel.find(params[:id])
+    @words = Word.all
+    @word = Word.new
   end
 
   def update
