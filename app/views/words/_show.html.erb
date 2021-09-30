@@ -1,17 +1,23 @@
 <section>
   <div id="ajax__word_edit">
-      <%= link_to workspace_word_edit_path(workspace.id, word.id), remote: true do %>
-        <i class="fas fa-pen-square icon"></i>
-      <% end %>
-      <%= link_to workspace_word_path(workspace, word), method: :delete, remote: true do %>
-        <i class="fas fa-minus-square icon"></i>
-      <% end %>
+    <%= link_to workspace_word_edit_path(workspace.id, word.id), remote: true do %>
+      <i class="fas fa-pen-square icon"></i>
+    <% end %>
+    <%= link_to workspace_word_path(workspace, word), method: :delete, remote: true do %>
+      <i class="fas fa-minus-square icon"></i>
+    <% end %>
+    <div class="text__title">
     <div id="bar">
       <%= word.word %>
     </div>
+    </div>
+
     <button class="clipboard-btn" data-clipboard-action="copy" data-clipboard-target="#bar">
         <i class="fas fa-clipboard"></i>
     </button>
-    <div><%= simple_format word.commentary %></div>
+    <h5 class="text">説明</h5>
+    <div class="text__box">
+      <%= simple_format word.commentary %>
+    </div>
   </div>
 </section>
