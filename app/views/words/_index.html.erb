@@ -1,8 +1,8 @@
-<section class="">
+<section>
   <div class="container__main_text">
     <% workspace.words.each do |word| %>
     <div id="ajax__word_show">
-      <%= link_to word.word, workspace_word_show_path(workspace, word), remote: true %>
+      <%= link_to word.word, workspace_word_show_path(workspace, word), remote: true, class: "text__link" %>
     </div>
     <% end %>
   </div>

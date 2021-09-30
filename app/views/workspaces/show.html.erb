@@ -3,12 +3,16 @@
   <section class="container__main">
     <div class="container__main_text">
       <h5>タイトル</h5>
-      <h3><%= @workspace.noveltitle %></h3>
+      <h3 class="text__box">
+        <%= @workspace.noveltitle %>
+      </h3>
       <h5>あらすじ</h5>
-      <p><%= @workspace.overview %></p>
+      <div class="text__box">
+        <%= simple_format @workspace.overview %>
+      </div>
       <%= link_to "編集", edit_workspace_path(@workspace.id) %>
       <%= render 'novels/index', workspace:@workspace, novels:@novels, novel:@novel %>
-      <%= link_to "新規作成", new_workspace_novel_path(@workspace) %>
+      <%= link_to "新規投稿", new_workspace_novel_path(@workspace) %>
     </div>
   </section>
 </article>

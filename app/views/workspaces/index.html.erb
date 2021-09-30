@@ -4,12 +4,12 @@
   </div>
   <section class="container__soro">
     <div class="container__main_text">
-    <% @user.workspaces.each do |workspace| %>
-      <h3>
-        <%= link_to workspace.noveltitle, workspace_path(workspace.id) %>
-      </h3>
-    <% end %>
-    <div><%= link_to "新規作成", new_workspace_path %></div>
+      <% @user.workspaces.each do |workspace| %>
+        <h3>
+          <%= link_to workspace.noveltitle, workspace_path(workspace.id), class: "text__link" %>
+        </h3>
+      <% end %>
+      <div><%= link_to "新規作成", new_workspace_path %></div>
     </div>
   </section>
 </article>
