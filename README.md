@@ -14,6 +14,10 @@
 ### 主な利用シーン
   執筆作業。
 
+### テストユーザー
+  email: test1@test.com
+  password: password1
+
 ## 開発環境
 - OS：Big Sur(MacOS)
 - 言語：HTML,CSS,JavaScript,Ruby,SQL
