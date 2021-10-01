@@ -3,11 +3,18 @@
     <b class="container__header_text">WorkSpaceList</b>
   </div>
   <section class="container__soro">
-    <div class="container__main_text">
+    <div class="container__soro_text">
       <% @user.workspaces.each do |workspace| %>
-        <h3>
-          <%= link_to workspace.noveltitle, workspace_path(workspace.id), class: "text__link" %>
-        </h3>
+        <table class="table">
+          <tr>
+            <th>name</th>
+            <td><%= link_to workspace.noveltitle, workspace_path(workspace.id) %></td>
+            <th>投稿日</th>
+            <td><%= workspace.created_at.strftime('%Y/%m/%d %H:%M') %></td>
+            <th>更新日</th>
+            <td><%= workspace.updated_at.strftime('%Y/%m/%d %H:%M') %></td>
+          </tr>
+        </table>
       <% end %>
       <div><%= link_to "新規作成", new_workspace_path %></div>
     </div>
