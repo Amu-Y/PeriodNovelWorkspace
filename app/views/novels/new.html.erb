@@ -3,6 +3,7 @@
   <section class="container__main">
     <div class="textbox">
       <%= form_with(model:[@workspace, @novel]) do |f| %>
+        <div class="errors"><%= flash[:error] %></div>
         <h4 class="textbox__label">
           章タイトル
           </h4>

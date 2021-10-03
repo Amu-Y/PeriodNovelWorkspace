@@ -5,6 +5,7 @@
   <section class="container__soro">
     <div class="textbox">
       <%= form_with model:@workspace, local:true do |f| %>
+        <%= render 'layouts/error_messages', model: f.object %>
         <h4 class="textbox__label">
           小説タイトル
           </h4>

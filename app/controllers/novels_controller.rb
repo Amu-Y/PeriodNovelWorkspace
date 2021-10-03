@@ -3,8 +3,12 @@ class NovelsController < ApplicationController
     @workspace = Workspace.find(params[:workspace_id])
     @novel = Novel.new(novel_params)
     @novel.workspace_id = @workspace.id
-    @novel.save
-    redirect_to workspace_novel_path(@workspace, @novel.id)
+    if @novel.save
+      redirect_to workspace_novel_path(@workspace, @novel.id)
+    else
+      flash[:error] = "章タイトルと本文を1文字以上入力して下さい。"
+      redirect_back fallback_location: { action: "show", id: 5 }
+    end
   end
 
   def index
@@ -36,8 +40,12 @@ class NovelsController < ApplicationController
   def update
     @workspace = Workspace.find(params[:workspace_id])
     @novel = Novel.find(params[:id])
-    @novel.update(novel_params)
-    redirect_to workspace_novel_path(@workspace, @novel.id)
+    if @novel.update(novel_params)
+      redirect_to workspace_novel_path(@workspace, @novel.id)
+    else
+      flash[:error] = "章タイトルと本文を1文字以上入力して下さい。"
+      redirect_back fallback_location: { action: "show", id: 5 }
+    end
   end
 
   def destroy
